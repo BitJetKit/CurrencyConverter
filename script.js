@@ -23,6 +23,6 @@ $(document).ready(function () {
     startingNumber = $(this).val()
 
     // Call the currency converting function
-
-  })
+    convertCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
+  });
 });  
