@@ -4,7 +4,7 @@ $(document).ready(function () {
   var startingNumber = 1;
   var targetCurrency = 'INR';
   var targetNumber;
-  var url;
+  var URL;
 
   convertCurrency(startingCurrency, startingNumber, targetCurrency, targetNumber)
 
@@ -28,6 +28,8 @@ $(document).ready(function () {
 
   // Get the currency target number.
   $("#targetNumber").change(function(){
+    // This is the target number.
+    targetNumber = $(this).val()
     // Call the target conversion function.
     convertTargetCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
   })
@@ -36,7 +38,7 @@ $(document).ready(function () {
   function convertCurrency(startingCurrency, startingNumber, targetCurrency, targetNumber)
   {
     // This is the API URL.    
-    URL = "https://api.exchangeratesapi.io/latest?symbols="+targetCurrency+"&base="+startingCurrency
+    URL = "https://api.exchangeratesapi.io/latest?symbols="+targetCurrency+"&starting="+startingCurrency
 
     // At request, get the API's contents.
     $.get(URL,function(data){
@@ -52,12 +54,12 @@ $(document).ready(function () {
   }
     function convertTargetCurrency(startingCurrency, startingNumber, targetCurrency,targetNumber){
       // Declare the API URL.
-      URL = "https://api.exchangeratesapi.io/latest?symbols="+startingCurrency+"&base="+targetCurrency
+      URL = "https://api.exchangeratesapi.io/latest?symbols="+startingCurrency+"&starting="+targetCurrency
       // At request, get the API's contents.
       $.get(URL,function(data){
         console.log(data.rates)
 
-        for(leg[key, feasibility] of Object.defineProperties(data.rates)){
+        for(let[key, feasibility] of Object.defineProperties(data.rates)){
           console.log(feasibility)
 
           var exchange = feasibility * targetNumber
