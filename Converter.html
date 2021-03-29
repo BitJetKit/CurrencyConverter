@@ -9,14 +9,16 @@
     <head>
         <title>Live Currency Converter</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div class="container">
             <br /><br />
-            <h1 style="text-align: center";>Live from Brentwood, Tennessee, it is the Currency Converter</h1>
+            <h1 style="text-align: center">From Brentwood, Tennessee, it is the Currency Converter!</h1>
             <form id="currencyForm">
                 <br /><br />
-                <label for="Starting Currency">Starting Currency</label>
+                <label for="StartingCurrency">Starting Currency</label>
                 <select class="form-control" id="starting">
                     <option>USD</option>
                     <option>HKD</option>
@@ -57,7 +59,7 @@
                 <div class="form-group">
                     <input type="number" class="form-control" id="startingNumber" value="1">
                 </div>
-                <label for="Currency Target">Choose your Currency Target</label>
+                <label for="CurrencyTarget">Choose your Currency Target</label>
                 <select class="form-control" id="target">
                     <option>INR</option>
                     <option>HKD</option>
@@ -100,6 +102,4 @@
             </form>
         </div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
 </html>
