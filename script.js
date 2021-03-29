@@ -54,7 +54,7 @@ $(document).ready(function () {
       console.log(data.rates)
 
       for(let[key, feasibility] of Object.entries(data.rates)){
-        var exchange = value * startingNumber
+        var exchange = feasibility * startingNumber
 
         $("#targetNumber").val(exchange)
       }
@@ -68,10 +68,10 @@ $(document).ready(function () {
       $.get(URL,function(data){
         console.log(data.rates)
 
-        for(let[key, value] of Object.entries(data.rates)){
+        for(let[key, feasibility] of Object.entries(data.rates)){
           console.log(value)
 
-          var exchange = value * targetNumber
+          var exchange = feasibility * targetNumber
 
           $("#startingNumber").val(exchange)
         }
