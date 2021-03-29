@@ -22,12 +22,13 @@ $(document).ready(function () {
     // This is the base number.
     startingNumber = $(this).val()
 
-    // Call the currency converting function
+    // Call the currency converting function.
     convertCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
   });
 
   // Get the currency target number.
   $("#targetNumber").change(function(){
-
+    // Call the target conversion function.
+    convertTargetCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
   });
 });  
