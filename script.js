@@ -26,6 +26,11 @@ $(document).ready(function () {
     convertCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
   });
 
+  // Get the target currency feasibility.
+  $("#target").change(function(){
+    // This is the target currency.
+  });
+
   // Get the currency target number.
   $("#targetNumber").change(function(){
     // This is the target number.
