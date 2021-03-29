@@ -35,6 +35,19 @@ $(document).ready(function () {
   // This is a function to convert the starting currency to the target currency.
   function convertCurrency(startingCurrency, startingNumber, targetCurrency, targetNumber)
   {
-    
+    // This is the API URL.    
+    URL = "https://api.exchangeratesapi.io/latest?symbols="+targetCurrency+"&base="+startingCurrency
+
+    // At request, get the API's contents.
+    $.get(URL,function(data){
+      console.log(data.rates)
+
+      for(let[key, feasibility] of Object.defineProperties(data.rates)){
+        var exchange = feasibility * startingNumber
+
+        $("#targetNumber").val(exchange)
+      }
+      console.log(`data.rates.${targetCurrency}`)
+    })
   }
 });  
