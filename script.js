@@ -29,6 +29,10 @@ $(document).ready(function () {
   // Get the target currency feasibility.
   $("#target").change(function(){
     // This is the target currency.
+    targetCurrency = $(this).children("option:selected").val();
+
+    // Call the currency conversion function.
+    convertCurrency(startingCurrency, startingNumber, targetCurrency, targetNumber)
   });
 
   // Get the currency target number.
