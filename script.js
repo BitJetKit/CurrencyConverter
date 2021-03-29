@@ -53,8 +53,8 @@ $(document).ready(function () {
     $.get(URL,function(data){
       console.log(data.rates)
 
-      for(let[key, feasibility] of Object.defineProperties(data.rates)){
-        var exchange = feasibility * startingNumber
+      for(let[key, feasibility] of Object.entries(data.rates)){
+        var exchange = value * startingNumber
 
         $("#targetNumber").val(exchange)
       }
@@ -68,10 +68,10 @@ $(document).ready(function () {
       $.get(URL,function(data){
         console.log(data.rates)
 
-        for(let[key, feasibility] of Object.defineProperties(data.rates)){
-          console.log(feasibility)
+        for(let[key, value] of Object.entries(data.rates)){
+          console.log(value)
 
-          var exchange = feasibility * targetNumber
+          var exchange = value * targetNumber
 
           $("#startingNumber").val(exchange)
         }
