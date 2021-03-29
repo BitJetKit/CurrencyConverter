@@ -32,5 +32,9 @@ $(document).ready(function () {
     convertTargetCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
   })
 
-
+  // This is a function to convert the starting currency to the target currency.
+  function convertCurrency(startingCurrency, startingNumber, targetCurrency, targetNumber)
+  {
+    
+  }
 });  
