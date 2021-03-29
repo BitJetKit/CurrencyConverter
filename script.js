@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     // Call the currency converting function.
     convertCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
-  });
+  })
 
   // Get the target currency feasibility.
   $("#target").change(function(){
