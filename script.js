@@ -49,8 +49,22 @@ $(document).ready(function () {
       }
       console.log(`data.rates.${targetCurrency}`)
     })
-    function convertTargetCurrency(startingCurrency, startingNumber, targetCurrency,targetNumber){
-      
-    }
   }
+    function convertTargetCurrency(startingCurrency, startingNumber, targetCurrency,targetNumber){
+      // Declare the API URL.
+      URL = "https://api.exchangeratesapi.io/latest?symbols="+startingCurrency+"&base="+targetCurrency
+      // At request, get the API's contents.
+      $.get(URL,function(data){
+        console.log(data.rates)
+
+        for(leg[key, feasibility] of Object.defineProperties(data.rates)){
+          console.log(feasibility)
+
+          var exchange = feasibility * targetNumber
+
+          $("#startingNumber").val(exchange)
+        }
+        console.log(`data.rates.${targetCurrency}`)
+      })
+    }  
 });  
