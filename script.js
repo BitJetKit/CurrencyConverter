@@ -49,5 +49,8 @@ $(document).ready(function () {
       }
       console.log(`data.rates.${targetCurrency}`)
     })
+    function convertTargetCurrency(startingCurrency, startingNumber, targetCurrency,targetNumber){
+      
+    }
   }
 });  
