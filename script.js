@@ -30,5 +30,7 @@ $(document).ready(function () {
   $("#targetNumber").change(function(){
     // Call the target conversion function.
     convertTargetCurrency(startingCurrency,startingNumber,targetCurrency,targetNumber)
-  });
+  })
+
+
 });  
